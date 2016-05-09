@@ -7,7 +7,7 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>DASHGUM - FREE Bootstrap Admin Template</title>
+    <title>Sistema de Gestion ICE</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -42,7 +42,7 @@
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
-            <a href="index.html" class="logo"><b>DASHGUM FREE</b></a>
+            <a href="index.html" class="logo"><b>Sistema ICE</b></a>
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
                 <!--  notification start -->
@@ -51,13 +51,14 @@
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
                             <i class="fa fa-tasks"></i>
-                            <span class="badge bg-theme">4</span>
+                            <span class="badge bg-theme">0</span>
                         </a>
                         <ul class="dropdown-menu extended tasks-bar">
                             <div class="notify-arrow notify-arrow-green"></div>
                             <li>
-                                <p class="green">You have 4 pending tasks</p>
+                                <p class="green">Tienes 0 tareas pendientes</p>
                             </li>
+                            <!--
                             <li>
                                 <a href="index.html#">
                                     <div class="task-info">
@@ -110,8 +111,9 @@
                                     </div>
                                 </a>
                             </li>
+                            -->
                             <li class="external">
-                                <a href="#">See All Tasks</a>
+                                <a href="#">Mostrar todas las tareas</a>
                             </li>
                         </ul>
                     </li>
@@ -120,13 +122,14 @@
                     <li id="header_inbox_bar" class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
                             <i class="fa fa-envelope-o"></i>
-                            <span class="badge bg-theme">5</span>
+                            <span class="badge bg-theme">0</span>
                         </a>
                         <ul class="dropdown-menu extended inbox">
                             <div class="notify-arrow notify-arrow-green"></div>
                             <li>
-                                <p class="green">You have 5 new messages</p>
+                                <p class="green">Tienes 0 mensajes</p>
                             </li>
+                            <!--
                             <li>
                                 <a href="index.html#">
                                     <span class="photo"><img alt="avatar" src="assets/img/ui-zac.jpg"></span>
@@ -174,7 +177,7 @@
                                         Please, answer asap.
                                     </span>
                                 </a>
-                            </li>
+                            </li>-->
                             <li>
                                 <a href="index.html#">See all messages</a>
                             </li>
@@ -186,7 +189,7 @@
             </div>
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.html">Logout</a></li>
+                    <li><a class="logout" href="login.html">Cerrar</a></li>
             	</ul>
             </div>
         </header>
@@ -202,27 +205,39 @@
               <ul class="sidebar-menu" id="nav-accordion">
               
               	  <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered">Marcel Newman</h5>
+              	  <h5 class="centered">Ramiro Gonzalez</h5>
               	  	
                   <li class="mt">
                       <a class="active" href="index.html">
                           <i class="fa fa-dashboard"></i>
-                          <span>Dashboard</span>
+                          <span>Inicio</span>
                       </a>
                   </li>
 
                   <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-desktop"></i>
-                          <span>UI Elements</span>
+                          <span>Usuarios</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="general.html">General</a></li>
-                          <li><a  href="buttons.html">Buttons</a></li>
-                          <li><a  href="panels.html">Panels</a></li>
+                          <li><a  href="crear_usuario.php">Crear</a></li>
+                          <li><a  href="buttons.html">Listar todos</a></li>
+                          <li><a  href="panels.html">Dar de baja</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-desktop"></i>
+                          <span>Clientes</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="crear_cliente.php">Crear</a></li>
+                          <li><a  href="buttons.html">Listar todos</a></li>
+                          <li><a  href="panels.html">Dar de baja</a></li>
                       </ul>
                   </li>
 
+                  <!--
                   <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-cogs"></i>
@@ -274,7 +289,7 @@
                           <li><a  href="chartjs.html">Chartjs</a></li>
                       </ul>
                   </li>
-
+                -->
               </ul>
               <!-- sidebar menu end-->
           </div>
@@ -285,12 +300,14 @@
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
       <!--main content start-->
+
+      
       <section id="main-content">
           <section class="wrapper">
 
               <div class="row">
                   <div class="col-lg-9 main-chart">
-                  
+                    <!--
                   	<div class="row mtbox">
                   		<div class="col-md-2 col-sm-2 col-md-offset-1 box0">
                   			<div class="box1">
@@ -328,11 +345,11 @@
 					  			<p>Your server is working perfectly. Relax & enjoy.</p>
                   		</div>
                   	
-                  	</div><!-- /row mt -->	
-                  
-                      
+                  	</div>
+                  -->
+            
                       <div class="row mt">
-                      <!-- SERVER STATUS PANELS -->
+
                       	<div class="col-md-4 col-sm-4 mb">
                       		<div class="white-panel pn donut-chart">
                       			<div class="white-header">
@@ -357,8 +374,8 @@
 										];
 										var myDoughnut = new Chart(document.getElementById("serverstatus01").getContext("2d")).Doughnut(doughnutData);
 								</script>
-	                      	</div><! --/grey-panel -->
-                      	</div><!-- /col-md-4-->
+	                      	</div>
+                      	</div>
                       	
 
                       	<div class="col-md-4 col-sm-4 mb">
@@ -376,10 +393,10 @@
 										<img src="assets/img/product.png" width="120">
 	                      		</div>
                       		</div>
-                      	</div><!-- /col-md-4 -->
+                      	</div>
                       	
 						<div class="col-md-4 mb">
-							<!-- WHITE PANEL - TOP USER -->
+							
 							<div class="white-panel pn">
 								<div class="white-header">
 									<h5>TOP USER</h5>
@@ -397,14 +414,14 @@
 									</div>
 								</div>
 							</div>
-						</div><!-- /col-md-4 -->
+						</div>
                       	
 
-                    </div><!-- /row -->
+                    </div>
                     
                     				
 					<div class="row">
-						<!-- TWITTER PANEL -->
+
 						<div class="col-md-4 mb">
                       		<div class="darkblue-panel pn">
                       			<div class="darkblue-header">
