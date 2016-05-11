@@ -236,6 +236,17 @@
                           <li><a  href="panels.html">Dar de baja</a></li>
                       </ul>
                   </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-cogs"></i>
+                          <span>Rol</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="crear_rol.php">Crear</a></li>
+                          <li><a  href="buttons.html">Listar todos</a></li>
+                          <li><a  href="panels.html">Dar de baja</a></li>
+                      </ul>
+                  </li>
                   <!--
                   <li class="sub-menu">
                       <a href="javascript:;" >
@@ -302,6 +313,39 @@
       <section id="main-content">
           <section class="wrapper">
           <div class="row mt">
+
+          <?php
+            include('php/usuario.php');
+
+            if (isset($_POST['registrarUsuario'])) {
+              $pass1 = $_POST['pass1'];
+              $pass2 = $_POST['pass2'];
+              if ($pass1 == $pass2) {
+                $usuario = $_POST['usuario'];
+                $nombre = $_POST['nombre'];
+                $apellido = $_POST['apellido'];
+                $telefono = $_POST['telefono'];
+                $correo = $_POST['correo'];
+                $cedula = $_POST['cedula'];
+
+                $user = new Usuario($usuario, $pass1, $nombre, $apellido, $telefono, $correo, $cedula);
+                $respuestaRegistro = $user->registrarUsuario();
+
+                echo "Conexion ".$user->model->strConexion;
+
+                unset($_POST);
+                $_POST = array();
+
+                $user->model->cerrarConexion();
+                /*
+                if ($respuestaRegistro == 0) {
+                  //header("Location: login.php");
+                }
+                */
+              }
+            }
+          ?>  
+
           <form class="form-login-ice" action="" method="post" onsubmit="return validarPass(this)">
             <h2 class="form-login-heading">Crear Usuario</h2>
             <div class="login-wrap">
@@ -314,6 +358,8 @@
                 <input type="text" name="nombre" class="form-control" placeholder="Nombre" autofocus required>
                 <br>
                 <input type="text" name="apellido" class="form-control" placeholder="Apellido" autofocus required>
+                <br>
+                <input type="text" name="cedula" class="form-control" placeholder="Cedula" autofocus required>
                 <br>
                 <input type="text" name="telefono" class="form-control" placeholder="Telefono" autofocus required>
                 <br>
@@ -348,6 +394,7 @@
                 -->
     
             </div>
+
             <!--
             <div class="col-lg-6 col-md-6 col-sm-12">
               
@@ -499,7 +546,8 @@
           </div>
           </section>
       </section><!-- /MAIN CONTENT -->
-
+            <br>
+            <br>
       <!--main content end-->
       <!--footer start-->
       <footer class="site-footer">

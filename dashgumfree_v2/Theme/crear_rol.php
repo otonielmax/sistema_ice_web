@@ -226,23 +226,23 @@
                       </ul>
                   </li>
                   <li class="sub-menu">
-                      <a class="active" href="javascript:;" >
+                      <a href="javascript:;" >
                           <i class="fa fa-desktop"></i>
                           <span>Clientes</span>
                       </a>
                       <ul class="sub">
-                          <li class="active"><a  href="crear_cliente.php">Crear</a></li>
+                          <li><a  href="crear_cliente.php">Crear</a></li>
                           <li><a  href="buttons.html">Listar todos</a></li>
                           <li><a  href="panels.html">Dar de baja</a></li>
                       </ul>
                   </li>
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a class="active" href="javascript:;" >
                           <i class="fa fa-cogs"></i>
                           <span>Rol</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="crear_rol.php">Crear</a></li>
+                          <li class="active"><a  href="crear_rol.php">Crear</a></li>
                           <li><a  href="buttons.html">Listar todos</a></li>
                           <li><a  href="panels.html">Dar de baja</a></li>
                       </ul>

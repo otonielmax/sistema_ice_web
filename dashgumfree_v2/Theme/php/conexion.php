@@ -1,7 +1,7 @@
 <?php
 	class Modelo
 	{
-		public $usuario = 'postgres';
+		public $usuario = 'root';
 		public $pass = '21091361';
 		public $baseDeDatos = 'sistema_ice';
 		public $port = 5432;
@@ -11,12 +11,17 @@
 		public $cnx = null;
 
 		public function crearConexion() {
+			$this->strConexion = mysql_connect($this->host, $this->usuario, $this->pass);
+			mysql_select_db($this->baseDeDatos, $this->strConexion);
+
+			/*
 			$this->strConexion = "host=$this->host port=$this->port dbname=$this->baseDeDatos user=$this->usuario password=$this->pass";
 			$this->cnx = pg_connect($this->strConexion) or die("Error de conexion ".pg_last_error()); 
+			*/
 		}
 
 		public function cerrarConexion() {
-			pg_close($this->cnx);
+			mysql_close($this->strConexion);
 		}
 	}
 ?>
